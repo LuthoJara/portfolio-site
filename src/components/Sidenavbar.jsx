@@ -3,9 +3,12 @@ import styled from "styled-components"
 
 const Container = styled.div`
     flex: 1; 
-    display: flex;  
+    display: flex;
+    flex-direction: column;
     height: auto;
-    t0
+    top: 0;
+    left: 0;
+    width: 50px;
     background-color: #000000;
     padding-bottom: 5px;
 `
@@ -17,6 +20,8 @@ const Links = styled.div`
 `
 const SocialContainer = styled.div`
     display: flex;
+    flex-direction: column;
+
 `
 const SocialIcons = styled.a`
     width: 40px;

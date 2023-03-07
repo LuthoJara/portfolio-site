@@ -1,5 +1,5 @@
 //Importing for the sticky menu
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 //Importing the logo
@@ -54,7 +54,7 @@ const Logo = styled.img`
   cursor: pointer;
 `
 const Right = styled.div`
-  flex: 5;
+  flex: 7;
   display: flex;
   align-items: center;
   text-align: center;
@@ -87,7 +87,7 @@ useEffect(() => {
       <Wrapper sticky={isSticky}>
         <Left>
           <MenuItem>
-            {/* <Logo src={} /> */}
+            <Logo src={HeroPic} />
           </MenuItem>
         </Left>
         <Right>
@@ -95,9 +95,9 @@ useEffect(() => {
           <MenuItem>Portfollio Projects</MenuItem>
           <MenuItem>Contact Me</MenuItem>
           <MenuItem>Download CV</MenuItem>
-          <MenuItem>
+          {/* <MenuItem>
            <HamburgerMenu/>
-          </MenuItem>
+          </MenuItem> */}
         </Right>
       </Wrapper>
     </Container>
