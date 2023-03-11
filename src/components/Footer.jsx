@@ -7,7 +7,7 @@ const Container = styled.div`
 const Footer = () => {
   return (
     <Container>
-        Footer section
+      Designed and coded by Lutho Jara
     </Container>
   )
 }

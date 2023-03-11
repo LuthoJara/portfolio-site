@@ -3,36 +3,42 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 //Importing the logo
-import HeroPic from "../files/HeroPic.JPG";
-
+import LJLogo from "../files/LJLogo.png";
+import CV from "../files/CV.pdf";
+// import { GitHub, LinkedIn, YouTube } from "@mui/icons-material";
 
 const Container = styled.div`
-  height: auto;
-  background-color: #000000;
-  padding-bottom: 5px;
-
-  //Making the menu sticky
-  position: relative;
+height: auto;
+width: 100%;
+padding-bottom: 5px;
 `
-const Wrapper = styled.div`
+const NavbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
+  background-color: #0C081A;
 
 //Making the menu sticky
-  height: ${props => props.sticky ? "5rem" : "8rem"};
-  padding: ${props => props.sticky ? "0px 10px" : "20px 40px"};
+  height: ${props => props.sticky ? "4rem" : "7rem"};
+  padding: ${props => props.sticky ? "5px 10px" : "10px 20px"};
   position: ${props => props.sticky ? "fixed" : "relative"};
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
-  transition: all 0.3s ease-in-out;
+  z-index: 20;
+  transition: all 0.5s ease-in-out;
+  `
+const Left = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 10vh;
 `
-const MenuItem = styled.div` 
-  font-size: 1.4rem;
+const MenuItem = styled.div`
   width: auto;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   text-align: center;
@@ -40,18 +46,16 @@ const MenuItem = styled.div`
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
-  padding-right: 15px;
-` 
-const Left = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+
+  &:hover{
+  color: #d4af37
+  }
 `
 const Logo = styled.img`
   height: auto;
-  width: 13vw;
+  width: 11vw;
   cursor: pointer;
+  border-radius: 50%;
 `
 const Right = styled.div`
   flex: 7;
@@ -72,35 +76,38 @@ useEffect(() => {
       setSticky(true);
     } else {
       setSticky(false);
-    }
+    } if (window.scrollY < 100) {
+      setSticky(false);
+    } 
   };
-
   window.addEventListener("scroll", handleScroll);
 
   return () => {
     window.removeEventListener("scroll", handleScroll);
-  };
-}, [setSticky]);
-  
+  }
+  }, [setSticky])
+
+  // On the Download CV it enables you to download the CV
+  const handleButtonClick = () => {
+    window.open(CV, '_blank');
+  }
+
   return (
     <Container>
-      <Wrapper sticky={isSticky}>
+      <NavbarWrapper sticky={isSticky}>
         <Left>
           <MenuItem>
-            <Logo src={HeroPic} />
+            <Logo src={LJLogo} />
           </MenuItem>
         </Left>
         <Right>
           <MenuItem>About Me</MenuItem>
-          <MenuItem>Portfollio Projects</MenuItem>
+          <MenuItem>Portfolio Projects</MenuItem>
           <MenuItem>Contact Me</MenuItem>
-          <MenuItem>Download CV</MenuItem>
-          {/* <MenuItem>
-           <HamburgerMenu/>
-          </MenuItem> */}
+          <MenuItem onClick={handleButtonClick}>Download CV</MenuItem>
         </Right>
-      </Wrapper>
+      </NavbarWrapper>
     </Container>
   );
 };
-export default Navbar;
+export default Navbar
