@@ -3,19 +3,20 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: auto;
-  w100%
+  height: 0;
+  width: 100%;
   z-index: 20;
-  `
+`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  padding: ${props => props.sticky ? "195px 35px" : "75px 35px"};
   position: ${props => props.sticky ? "fixed" : "relative"};
   top: 0;
   left: 0;
-  /* right: 0; */
+  right: 0;
   z-index: 20;
 `
 const Left = styled.div`
@@ -44,23 +45,25 @@ const SocialIcons = styled.a`
 const Right = styled.div`
   display: flex;
   align-items: center;
-  text-align: center;
-  justify-content: flex-end;
+  justify-content: space-around;
   transform: rotate(90deg);
-  /* padding-right: 10px; */
+  width: 25px;
+  height: 3rem;
 `
 const Email = styled.p`
   /* font-weight: 400; */
   font-size: 1.2em;
   margin: 0;
   padding: 0;
+  color: #0C081A;
+  /* padding-left: 105px; */
 `
 const Sidenavbar = () => {
   const [isSticky, setSticky] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > .1) {
         setSticky(true);
       } else {
         setSticky(false);
@@ -90,7 +93,7 @@ const Sidenavbar = () => {
           </SocialContainer>
         </Left>
         <Right>
-          <Email>_____Luthojaraofficial@gmail.com_____</Email>
+          <Email>Luthojaraofficial@gmail.com</Email>
         </Right>
       </Wrapper>
     </Container>

@@ -5,12 +5,12 @@ import styled from "styled-components";
 //Importing the logo
 import LJLogo from "../files/LJLogo.png";
 import CV from "../files/CV.pdf";
-// import { GitHub, LinkedIn, YouTube } from "@mui/icons-material";
 
 const Container = styled.div`
-height: auto;
-width: 100%;
-padding-bottom: 5px;
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 `
 const NavbarWrapper = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const NavbarWrapper = styled.div`
   background-color: #0C081A;
 
 //Making the menu sticky
-  height: ${props => props.sticky ? "4rem" : "7rem"};
+  height: 3.5rem;
   padding: ${props => props.sticky ? "5px 10px" : "10px 20px"};
   position: ${props => props.sticky ? "fixed" : "relative"};
   top: 0;
@@ -34,7 +34,6 @@ const Left = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 10vh;
 `
 const MenuItem = styled.div`
   width: auto;
@@ -52,7 +51,8 @@ const MenuItem = styled.div`
   }
 `
 const Logo = styled.img`
-  height: auto;
+  height: ${props => props.sticky ? "3.5rem" : "auto"};
+  /* height: auto; */
   width: 11vw;
   cursor: pointer;
   border-radius: 50%;
@@ -72,11 +72,9 @@ useEffect(() => {
   window.scrollTo(0, 0);
 
   const handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 0.001) {
       setSticky(true);
     } else {
-      setSticky(false);
-    } if (window.scrollY < 100) {
       setSticky(false);
     } 
   };
