@@ -1,16 +1,17 @@
 import styled from "styled-components"
 
-import HeroPic from "../files/HeroPic.JPG"
-
 const Container = styled.div`
-  height: 50vh;
-  background-image: image(${HeroPic}) ;
-`
 
+`
+const Wrapper = styled.div`
+
+`
 const Hero = () => {
   return (
     <Container>
-        Hero section
+        <Wrapper>
+          Hero section
+        </Wrapper>
     </Container>
   )
 }
