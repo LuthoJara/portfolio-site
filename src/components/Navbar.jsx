@@ -27,7 +27,7 @@ const NavbarWrapper = styled.div`
   right: 0;
   z-index: 20;
   transition: all 0.5s ease-in-out;
-  `
+`
 const Left = styled.div`
   flex: 1;
   display: flex;
@@ -47,7 +47,7 @@ const MenuItem = styled.div`
   cursor: pointer;
 
   &:hover{
-  color: #d4af37
+  color: #d4af37;
   }
 `
 const Logo = styled.img`

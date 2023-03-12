@@ -12,8 +12,9 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  padding: ${props => props.sticky ? "195px 35px" : "75px 35px"};
+  padding: ${props => props.sticky ? "205px 35px" : "75px 35px"};
   position: ${props => props.sticky ? "fixed" : "relative"};
+  /* position: fixed; */
   top: 0;
   left: 0;
   right: 0;
@@ -51,12 +52,10 @@ const Right = styled.div`
   height: 3rem;
 `
 const Email = styled.p`
-  /* font-weight: 400; */
   font-size: 1.2em;
   margin: 0;
   padding: 0;
   color: #0C081A;
-  /* padding-left: 105px; */
 `
 const Sidenavbar = () => {
   const [isSticky, setSticky] = useState(false);
