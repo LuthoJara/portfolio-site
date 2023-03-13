@@ -1,4 +1,4 @@
-import { GitHub, OpenInBrowser } from "@mui/icons-material"
+import { GitHub, LaunchOutlined } from "@mui/icons-material"
 import styled from "styled-components"
 import UCthumbnail from "../files/UCthumbnail.png"
 
@@ -15,8 +15,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   background-color: #0C081A;
+  border: 1px solid #fff;
 `
 const Header = styled.div`
   font-size: 60px;
@@ -26,7 +26,14 @@ const ThumbnailContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+
+  /* flex-wrap: wrap;
+  flex: 1 2 0; reset flex property to 0 to allow for manual width assignment */
+  
+  & > * {
+    flex-basis: calc(33.333333% - 20px); /* set width of each item to one-third of the Wrapper's width minus margin */
+    margin: 10px; /* add some margin between each item */
+  }
 `
 const Title = styled.div`
   font-size: 20px;
@@ -37,10 +44,11 @@ const ImgContainer = styled.div`
 `
 const Img = styled.img`
   height: 250px;
-  width: 500px;
+  width: 300px;
   /* padding: 15px; */
 `
 const Links = styled.div`
+  color: #fff;
 
 `
 const Projects = () => {
@@ -55,7 +63,7 @@ const Projects = () => {
           </ImgContainer>
           <Links>
             <GitHub/>
-            <OpenInBrowser/>
+            <LaunchOutlined/>
           </Links>
           </ThumbnailContainer>    
       </Wrapper>

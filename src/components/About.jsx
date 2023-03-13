@@ -32,7 +32,7 @@ const H1 = styled.h1`
   color: #d4af37;
   }
 `
-const Paragraph1 = styled.div`
+const Paragraph1 = styled.p`
  &:hover{
   color: #d48837;
   }
