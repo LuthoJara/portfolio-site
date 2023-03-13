@@ -1,5 +1,5 @@
 import { GitHub, LinkedIn, YouTube } from "@mui/icons-material";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -58,11 +58,15 @@ const Email = styled.p`
   margin: 0;
   padding: 0;
   color: #0C081A;
+  cursor: pointer;
 `
+
 const Sidenavbar = () => {
   const [isSticky, setSticky] = useState(false);
 
   useEffect(() => {
+  
+    //This section is for the sidenavbars so that they stick in place
     const handleScroll = () => {
       if (window.scrollY > .1) {
         setSticky(true);
@@ -77,6 +81,14 @@ const Sidenavbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [setSticky]);
+  
+  //This section is so that when the email is clicked, it is also copied
+  
+  const emailRef = useRef(null);
+
+  const handleClick = () => {
+    navigator.clipboard.writeText(emailRef.current.textContent);
+  };
   return (
     <Container>
       <Wrapper sticky={isSticky}>
@@ -94,7 +106,7 @@ const Sidenavbar = () => {
           </SocialContainer>
         </Left>
         <Right>
-          <Email>Luthojaraofficial@gmail.com</Email>
+          <Email ref={emailRef} onClick={handleClick}>Luthojaraofficial@gmail.com</Email>
         </Right>
       </Wrapper>
     </Container>
