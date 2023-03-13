@@ -8,7 +8,7 @@ const Container = styled.div`
   width: 100%;
   background-color: #d4af37;
   padding: 10px;
-`
+  `
 const Wrapper = styled.div`
   margin: 0 auto; //This will center the div horizontally
   width: 85%; 
@@ -16,9 +16,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #0C081A;
-  border: 3px solid #fff;
-  //Future reference: to make a link clickable put a z-index
-  z-index: 20;
+  z-index: 22;
 `
 const Header = styled.div`
   font-size: 60px;
@@ -75,6 +73,9 @@ const Link = styled.a`
   margin: 15px 25px 0 0;
   color: #000000;
   background-color: ${(props) => props.color};
+  &:hover{
+    color: #d4b44a;
+  }
 `
 const Projects = () => {
   return (

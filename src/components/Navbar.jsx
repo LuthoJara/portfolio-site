@@ -9,23 +9,23 @@ import CV from "../files/CV.pdf";
 const Container = styled.div`
   height: auto;
   width: 100%;
-  margin: 0;
-  padding: 0;
+  position: relative;
+  z-index: 20;
 `
 const NavbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #0C081A;
-
-//Making the menu sticky
-  height: 3.5rem;
+  
+  //Making the menu sticky
+  /* height: 3.5rem; */
   padding: ${props => props.sticky ? "5px 10px" : "10px 20px"};
-  position: ${props => props.sticky ? "fixed" : "relative"};
+  position: ${props => props.sticky ? "fixed" : "relative"};  
+  /* position: fixed; */
   top: 0;
   left: 0;
   right: 0;
-  z-index: 20;
   transition: all 0.5s ease-in-out;
 `
 const Left = styled.div`
@@ -52,7 +52,7 @@ const MenuItem = styled.div`
 `
 const Logo = styled.img`
   height: ${props => props.sticky ? "3.5rem" : "auto"};
-  /* height: auto; */
+  /* height: 3.5rem; */
   width: 11vw;
   cursor: pointer;
   border-radius: 50%;
@@ -69,7 +69,7 @@ const Navbar = () => {
 
 useEffect(() => {
   // Reset scroll position on page load
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 
   const handleScroll = () => {
     if (window.scrollY > 0.001) {
