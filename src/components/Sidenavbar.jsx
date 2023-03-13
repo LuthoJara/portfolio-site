@@ -5,18 +5,13 @@ import styled from "styled-components";
 const Container = styled.div`
   height: 0;
   width: 100%;
-  z-index: 20;
 `
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* padding: ${props => props.sticky ? "205px 15px" : "75px 15px"}; */
   padding: 205px 15px;
-
   position: ${props => props.sticky ? "fixed" : "relative"};
-  /* position: fixed; */
   top: 0;
   left: 0;
   right: 0;
@@ -31,7 +26,6 @@ const SocialContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   width: 100%;
 `
 const SocialIcons = styled.a`

@@ -11,12 +11,14 @@ const Container = styled.div`
 `
 const Wrapper = styled.div`
   margin: 0 auto; //This will center the div horizontally
-  width: 85%; //This will limit the width of the div to 80%
+  width: 85%; 
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #0C081A;
   border: 3px solid #fff;
+  //Future reference: to make a link clickable put a z-index
+  z-index: 20;
 `
 const Header = styled.div`
   font-size: 60px;
@@ -30,21 +32,14 @@ const ThumbnailContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 30px 0px;
-
-  /* flex-wrap: wrap;
-  flex: 1 2 0; reset flex property to 0 to allow for manual width assignment */
-
-  /* & > * {
-    flex-basis: calc(33.333333% - 20px);
-    margin: 10px; 
-  } */
+  width: 75%;
 `
 const InfoContainer = styled.div`
   padding-right: 70px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;  
+  justify-content: space-between;
 `
 const Title = styled.div`
   font-size: 20px;
@@ -52,11 +47,9 @@ const Title = styled.div`
 `
 const Description = styled.div`
   color: #fff;
-
 `
 const Tools = styled.div`
   color: #fff;
-
 `
 const ImgContainer = styled.div`
 
@@ -70,22 +63,19 @@ const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  text-align: center;
   width: 100%;
   `
 const Link = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* position: relative; */
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin: 15px 25px 0 0;
   color: #000000;
   background-color: ${(props) => props.color};
 `
-
 const Projects = () => {
   return (
     <Container>
@@ -99,16 +89,16 @@ const Projects = () => {
           <br/>
           <Tools>Tools: VS Code, HTML, CSS, JS, React, MUI, Styled Components</Tools>
           <LinkContainer>
-            <Link color="#ffffff" href="https://github.com/LuthoJara" target="_blank">
+            <Link color="#ffffff" href="https://github.com/LuthoJara/umlando-creations" target="_blank">
               <GitHub />
             </Link>
-            <Link color="#ffffff" href="https://www.linkedin.com/in/luthojara/" target="_blank">
+            <Link color="#ffffff" href="https://umlandocreations.netlify.app/" target="_blank">
               <LaunchOutlined />
             </Link>
           </LinkContainer>
           </InfoContainer>
           <ImgContainer>
-          <Img src= {UCthumbnail}/>
+           <Img src= {UCthumbnail}/>
           </ImgContainer>
           </ThumbnailContainer>
       </Wrapper>
