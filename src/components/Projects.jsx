@@ -79,7 +79,7 @@ const Link = styled.a`
 `
 const Projects = () => {
   return (
-    <Container>
+    <Container id="portfolio-projects">
       <Wrapper>
       <Header>My Projects</Header>
         <ThumbnailContainer>
