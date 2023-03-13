@@ -12,7 +12,9 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  padding: ${props => props.sticky ? "205px 35px" : "75px 35px"};
+  /* padding: ${props => props.sticky ? "205px 15px" : "75px 15px"}; */
+  padding: 205px 15px;
+
   position: ${props => props.sticky ? "fixed" : "relative"};
   /* position: fixed; */
   top: 0;
@@ -48,8 +50,8 @@ const Right = styled.div`
   align-items: center;
   justify-content: space-around;
   transform: rotate(90deg);
-  width: 25px;
-  height: 3rem;
+  width: 75px;
+  height: 1rem;
 `
 const Email = styled.p`
   font-size: 1.2em;
