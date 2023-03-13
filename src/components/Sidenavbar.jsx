@@ -5,17 +5,17 @@ import styled from "styled-components";
 const Container = styled.div`
   height: 0;
   width: 100%;
+  position: relative;
 `
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 205px 15px;
-  position: ${props => props.sticky ? "fixed" : "relative"};
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 20;
 `
 const Left = styled.div`
   display: flex;
@@ -48,7 +48,7 @@ const Right = styled.div`
   height: 1rem;
 `
 const Email = styled.p`
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin: 0;
   padding: 0;
   color: #0C081A;
