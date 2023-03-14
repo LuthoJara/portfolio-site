@@ -20,10 +20,8 @@ const NavbarWrapper = styled.div`
   background-color: #0C081A;
   
   //Making the menu sticky
-  /* height: 3.5rem; */
   padding: ${props => props.sticky ? "5px 10px" : "10px 20px"};
   position: ${props => props.sticky ? "fixed" : "relative"};  
-  /* position: fixed; */
   top: 0;
   left: 0;
   right: 0;
