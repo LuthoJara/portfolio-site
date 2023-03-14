@@ -2,6 +2,9 @@ import { GitHub, LinkedIn, YouTube } from "@mui/icons-material";
 import { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 
+//Importing responsiveness
+import {mobile} from "../responsive"
+
 const Container = styled.div`
   height: 0;
   width: 100%;
@@ -16,6 +19,10 @@ const Wrapper = styled.div`
   top: 0;
   left: 0;
   right: 0;
+
+  ${mobile({
+  padding: "205px 0px"
+  })}
 `
 const Left = styled.div`
   display: flex;

@@ -2,13 +2,15 @@ import { GitHub, LaunchOutlined } from "@mui/icons-material"
 import styled from "styled-components"
 import UCthumbnail from "../files/UCthumbnail.png"
 
+//Importing responsiveness
+import {mobile} from "../responsive"
+
 const Container = styled.div`
   display: flex;
   height: auto;
-  width: 100%;
   background-color: #d4af37;
   padding: 10px;
-  `
+`
 const Wrapper = styled.div`
   margin: 0 auto; //This will center the div horizontally
   width: 85%; 
@@ -16,13 +18,20 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #0C081A;
-  z-index: 22;
+
+  ${mobile({
+  width: "75%"
+  })}
 `
 const Header = styled.div`
   font-size: 60px;
   color: #fff;
   text-decoration: underline;
   padding: 30px 0px;
+
+  ${mobile({
+  fontSize: "55px"
+  })}
 `
 const ThumbnailContainer = styled.div`
   display: flex;
@@ -31,6 +40,10 @@ const ThumbnailContainer = styled.div`
   justify-content: space-between;
   padding: 30px 0px;
   width: 75%;
+
+  ${mobile({
+    flexDirection: "column-reverse",
+  })}
 `
 const InfoContainer = styled.div`
   padding-right: 70px;
@@ -38,6 +51,10 @@ const InfoContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+
+  ${mobile({
+    padding: "0",
+  })}
 `
 const Title = styled.div`
   font-size: 20px;
@@ -55,7 +72,11 @@ const ImgContainer = styled.div`
 const Img = styled.img`
   height: 250px;
   width: 300px;
-  /* padding: 15px; */
+
+  ${mobile({
+  height: "215px",
+  width: "250px"
+  })}
 `
 const LinkContainer = styled.div`
   display: flex;
