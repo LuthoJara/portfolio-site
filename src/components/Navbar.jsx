@@ -7,6 +7,10 @@ import { Link } from "react-scroll";
 import LJLogo from "../files/LJLogo.png";
 import CV from "../files/CV.pdf";
 
+//Importing responsiveness
+import {mobile} from "../responsive"
+
+
 const Container = styled.div`
   height: auto;
   width: 100%;
@@ -48,12 +52,24 @@ const MenuItem = styled.div`
   &:hover{
   color: #d4af37;
   }
+
+  ${mobile({
+    fontSize: "0.9rem",
+  })}
 `
 const Logo = styled.img`
   height: ${props => props.sticky ? "3.5rem" : "auto"};
   width: 11vw;
   cursor: pointer;
   border-radius: 50%;
+
+  ${mobile({
+  // height: "3.2rem",
+  // height: "${props => props.sticky ? '3.5rem' : 'auto'}",
+  // height: "" + (props => props.sticky ? '5rem' : 'auto'),
+  // height: "4.5rem",
+  width: "25vw"
+  })}
 `
 const Right = styled.div`
   flex: 7;

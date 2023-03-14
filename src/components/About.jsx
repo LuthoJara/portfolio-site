@@ -1,10 +1,12 @@
 import styled from "styled-components"
 import HeroPic from "../files/HeroPic.JPG"
 
+//Importing responsiveness
+import {mobile} from "../responsive"
+
 const Container = styled.div`
   display: flex;
   height: auto;
-  width: 100%;
   background-color: #d4af37;
   padding: 10px;
 `
@@ -16,6 +18,10 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #0C081A;
+
+  ${mobile({
+  width: "75%"
+  })}
 `
 const Header = styled.div`
   font-size: 60px;
@@ -30,14 +36,26 @@ const ThumbnailContainer = styled.div`
   justify-content: space-between;
   padding: 30px 0px;
   width: 75%;
+
+  ${mobile({
+    flexDirection: "column",
+  })}
 `
 const ImgContainer = styled.div`
   padding-right: 70px;
+
+  ${mobile({
+    padding: "0",
+  })}
 `
 const Img = styled.img`
   height: 250px;
   width: 300px;
-  /* padding: 15px; */
+
+  ${mobile({
+  height: "215px",
+  width: "250px"
+  })}
 `
 const InfoContainer = styled.div`
   display: flex;
