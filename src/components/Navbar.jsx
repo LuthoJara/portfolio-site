@@ -1,7 +1,7 @@
 //Importing for the sticky menu
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 
 //Importing the logo
 import LJLogo from "../files/LJLogo.png";
@@ -51,7 +51,6 @@ const MenuItem = styled.div`
 `
 const Logo = styled.img`
   height: ${props => props.sticky ? "3.5rem" : "auto"};
-  /* height: 3.5rem; */
   width: 11vw;
   cursor: pointer;
   border-radius: 50%;
