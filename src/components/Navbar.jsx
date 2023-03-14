@@ -97,14 +97,14 @@ useEffect(() => {
         <Left>
           <MenuItem>
           <Link to="about" smooth={true} duration={500} spy={true} exact="true" offset={-80}>
-            <Logo src={LJLogo} />
+            <Logo src={LJLogo}/>
           </Link>
           </MenuItem>
         </Left>
         <Right>
           <MenuItem>
           <Link to="about" smooth={true} duration={500} spy={true} exact="true" offset={-80}>
-            About Me
+            About Me 
           </Link>
           </MenuItem>
           <MenuItem>
