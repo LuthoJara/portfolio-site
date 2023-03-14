@@ -30,7 +30,7 @@ const Header = styled.div`
   padding: 30px 0px;
 
   ${mobile({
-  fontSize: "55px"
+  fontSize: "42px"
   })}
 `
 const ThumbnailContainer = styled.div`
@@ -74,8 +74,8 @@ const Img = styled.img`
   width: 300px;
 
   ${mobile({
-  height: "215px",
-  width: "250px"
+  height: "175px",
+  width: "190px"
   })}
 `
 const LinkContainer = styled.div`
