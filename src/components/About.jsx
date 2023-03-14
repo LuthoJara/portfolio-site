@@ -57,7 +57,7 @@ const Paragraph4 = styled.p`
 
 const About = () => {
   return (
-    <Container>
+    <Container id="about">
       <Wrapper> 
         <Header>About Me</Header>
         <ThumbnailContainer>

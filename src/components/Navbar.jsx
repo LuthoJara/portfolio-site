@@ -109,7 +109,7 @@ useEffect(() => {
           </MenuItem>
           <MenuItem>
           <Link to="portfolio-projects" smooth={true} duration={500} spy={true} exact="true" offset={-80}>
-            Portfolio Projects
+            Portfolio Project
           </Link>
           </MenuItem>
           <MenuItem>Contact Me</MenuItem>
