@@ -1,6 +1,7 @@
 //Importing for the sticky menu
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Link } from 'react-scroll';
 
 //Importing the logo
 import LJLogo from "../files/LJLogo.png";
