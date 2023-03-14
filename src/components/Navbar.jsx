@@ -1,6 +1,7 @@
 //Importing for the sticky menu
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Link } from 'react-scroll';
 
 //Importing the logo
 import LJLogo from "../files/LJLogo.png";
@@ -95,12 +96,22 @@ useEffect(() => {
       <NavbarWrapper sticky={isSticky}>
         <Left>
           <MenuItem>
-            <Logo src={LJLogo} />
+          <Link to="about" smooth={true} duration={500} spy={true} exact="true" offset={-80}>
+            <Logo src={LJLogo}/>
+          </Link>
           </MenuItem>
         </Left>
         <Right>
-          <MenuItem>About Me</MenuItem>
-          <MenuItem>Portfolio Projects</MenuItem>
+          <MenuItem>
+          <Link to="about" smooth={true} duration={500} spy={true} exact="true" offset={-80}>
+            About Me 
+          </Link>
+          </MenuItem>
+          <MenuItem>
+          <Link to="portfolio-projects" smooth={true} duration={500} spy={true} exact="true" offset={-80}>
+            Portfolio Projects
+          </Link>
+          </MenuItem>
           <MenuItem>Contact Me</MenuItem>
           <MenuItem onClick={handleButtonClick}>Download CV</MenuItem>
         </Right>
