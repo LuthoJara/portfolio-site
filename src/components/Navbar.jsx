@@ -32,7 +32,7 @@ const NavbarWrapper = styled.div`
   transition: all 0.5s ease-in-out;
 
   ${mobile({
-    padding: "5px 5px"
+    padding: "5px 5px",
   })}
 `
 const Left = styled.div`
