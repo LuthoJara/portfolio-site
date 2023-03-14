@@ -28,6 +28,10 @@ const Header = styled.div`
   color: #fff;
   text-decoration: underline;
   padding: 30px 0px;
+
+  ${mobile({
+    fontSize: "50px",
+  })}
   `
 const ThumbnailContainer = styled.div`
   display: flex;
@@ -53,8 +57,8 @@ const Img = styled.img`
   width: 300px;
 
   ${mobile({
-  height: "215px",
-  width: "250px"
+  height: "175px",
+  width: "190px"
   })}
 `
 const InfoContainer = styled.div`

@@ -6,8 +6,6 @@ import styled from "styled-components";
 import {mobile} from "../responsive"
 
 const Container = styled.div`
-  height: 0;
-  width: 100%;
   position: relative;
 `
 const Wrapper = styled.div`
@@ -45,6 +43,10 @@ const SocialIcons = styled.a`
   margin: 10px;
   color: #fff;
   background-color: ${(props) => props.color};
+
+  ${mobile({
+    margin: "10px 10px 10px 2px"
+  })}
 `
 const Right = styled.div`
   display: flex;
@@ -53,6 +55,10 @@ const Right = styled.div`
   transform: rotate(90deg);
   width: 75px;
   height: 1rem;
+
+  ${mobile({
+    width: "50px"
+  })}
 `
 const Email = styled.p`
   font-size: 1.5em;

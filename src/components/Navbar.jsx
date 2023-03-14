@@ -30,6 +30,10 @@ const NavbarWrapper = styled.div`
   left: 0;
   right: 0;
   transition: all 0.5s ease-in-out;
+
+  ${mobile({
+    padding: "5px 5px"
+  })}
 `
 const Left = styled.div`
   flex: 1;
@@ -68,7 +72,7 @@ const Logo = styled.img`
   // height: "${props => props.sticky ? '3.5rem' : 'auto'}",
   // height: "" + (props => props.sticky ? '5rem' : 'auto'),
   // height: "4.5rem",
-  width: "25vw"
+  width: "20vw"
   })}
 `
 const Right = styled.div`
